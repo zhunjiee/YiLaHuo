@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V0Y-tB-lSz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nIl-b5-ejj">
+            <objects>
+                <viewController id="V0Y-tB-lSz" customClass="FAQViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trW-q3-Kbz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7DA-3A-6WW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zi4-Ad-OdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-S0-dNX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7DA-3A-6WW" firstAttribute="top" secondItem="ogz-S0-dNX" secondAttribute="bottom" id="5Xt-YN-roy"/>
+                            <constraint firstItem="ogz-S0-dNX" firstAttribute="leading" secondItem="Zi4-Ad-OdJ" secondAttribute="leading" id="6GM-GH-VN6"/>
+                            <constraint firstAttribute="trailing" secondItem="ogz-S0-dNX" secondAttribute="trailing" id="ZmX-km-z5o"/>
+                            <constraint firstItem="ogz-S0-dNX" firstAttribute="top" secondItem="trW-q3-Kbz" secondAttribute="bottom" id="lPb-jS-OeU"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="FAQWebView" destination="ogz-S0-dNX" id="B6y-cc-MgY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XuO-Q6-y8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="130"/>
+        </scene>
+    </scenes>
+</document>

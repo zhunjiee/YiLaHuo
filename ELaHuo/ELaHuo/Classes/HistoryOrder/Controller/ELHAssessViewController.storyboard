@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Vp-k1-Kzz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Assess View Controller-->
+        <scene sceneID="UU8-2n-Rop">
+            <objects>
+                <viewController id="2Vp-k1-Kzz" customClass="ELHAssessViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6lG-Xr-yYG"/>
+                        <viewControllerLayoutGuide type="bottom" id="49D-9H-Be5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="epM-He-pGa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONI-Yx-y6t">
+                                <rect key="frame" x="20" y="90" width="560" height="150"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.94117647059999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="请写下您对本次服务的评价吧!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Qx-5ay">
+                                <rect key="frame" x="24" y="98" width="200" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PmB-hO-fgd">
+                                <rect key="frame" x="20" y="90" width="560" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="z0O-2i-Fm1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-Vq-cwK">
+                                <rect key="frame" x="20" y="260" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.3429501438" green="0.72652361430000001" blue="0.63019240929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2zj-7E-avU"/>
+                                </constraints>
+                                <state key="normal" title="确认评价">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXV-b4-NZv">
+                                <rect key="frame" x="480" y="65" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="F36-mQ-0eY"/>
+                                    <constraint firstAttribute="height" constant="20" id="lK7-V0-Mgk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N5N-Qx-5ay" firstAttribute="top" secondItem="PmB-hO-fgd" secondAttribute="top" constant="8" id="9uk-Xs-4s3"/>
+                            <constraint firstItem="uXV-b4-NZv" firstAttribute="trailing" secondItem="PmB-hO-fgd" secondAttribute="trailing" id="Jcx-gP-rrR"/>
+                            <constraint firstItem="ONI-Yx-y6t" firstAttribute="bottom" secondItem="PmB-hO-fgd" secondAttribute="bottom" id="Jyt-ll-jzs"/>
+                            <constraint firstItem="eNc-Vq-cwK" firstAttribute="top" secondItem="PmB-hO-fgd" secondAttribute="bottom" constant="20" id="KAZ-KV-0BE"/>
+                            <constraint firstItem="PmB-hO-fgd" firstAttribute="leading" secondItem="epM-He-pGa" secondAttribute="leading" constant="20" id="Ldr-Cp-v0c"/>
+                            <constraint firstItem="ONI-Yx-y6t" firstAttribute="trailing" secondItem="PmB-hO-fgd" secondAttribute="trailing" id="Ny2-7n-tnE"/>
+                            <constraint firstItem="ONI-Yx-y6t" firstAttribute="leading" secondItem="PmB-hO-fgd" secondAttribute="leading" id="Wmt-1n-YPr"/>
+                            <constraint firstItem="eNc-Vq-cwK" firstAttribute="centerX" secondItem="epM-He-pGa" secondAttribute="centerX" id="Yzq-ea-rXy"/>
+                            <constraint firstItem="ONI-Yx-y6t" firstAttribute="top" secondItem="PmB-hO-fgd" secondAttribute="top" id="aVf-qa-nEW"/>
+                            <constraint firstItem="eNc-Vq-cwK" firstAttribute="leading" secondItem="epM-He-pGa" secondAttribute="leading" constant="20" id="d4w-6j-uII"/>
+                            <constraint firstItem="N5N-Qx-5ay" firstAttribute="leading" secondItem="PmB-hO-fgd" secondAttribute="leading" constant="4" id="fGQ-JJ-JF4"/>
+                            <constraint firstItem="PmB-hO-fgd" firstAttribute="top" secondItem="6lG-Xr-yYG" secondAttribute="bottom" constant="90" id="nQW-qC-uPh"/>
+                            <constraint firstAttribute="trailing" secondItem="eNc-Vq-cwK" secondAttribute="trailing" constant="20" id="pKT-Za-kZX"/>
+                            <constraint firstAttribute="trailing" secondItem="PmB-hO-fgd" secondAttribute="trailing" constant="20" id="suB-Du-eRM"/>
+                            <constraint firstItem="PmB-hO-fgd" firstAttribute="top" secondItem="uXV-b4-NZv" secondAttribute="bottom" constant="5" id="vZg-sl-ZWP"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="assessLevelLabel" destination="uXV-b4-NZv" id="MW9-e4-KTx"/>
+                        <outlet property="placeholderLable" destination="N5N-Qx-5ay" id="9aw-3s-IYu"/>
+                        <outlet property="textView" destination="PmB-hO-fgd" id="loH-Au-uv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyM-iv-yWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="95"/>
+        </scene>
+    </scenes>
+</document>

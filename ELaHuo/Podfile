@@ -1,0 +1,10 @@
+platform :ios, "8.0"
+
+pod 'BaiduMapKit' #百度地图SDK
+pod 'AFNetworking', '~> 2.6.3'
+pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'SDWebImage'
+pod 'Masonry'
+pod 'CocoaAsyncSocket'
+

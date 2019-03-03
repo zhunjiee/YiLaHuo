@@ -1,0 +1,48 @@
+//
+//  ELaHuo.pch
+//  ElaHuo
+//
+//  Created by elahuo on 16/3/7.
+//  Copyright © 2016年 elahuo. All rights reserved.
+//
+
+#ifndef ELaHuo_pch
+#define ELaHuo_pch
+
+#ifdef __OBJC__
+
+#ifdef DEBUG // 调试阶段
+#define BSLog(...) NSLog(__VA_ARGS__);
+#define BSLogFunc NSLog(@"%s", __func__);
+#else // 发布阶段
+#define BSLog(...)
+#define BSLogFunc
+#endif
+
+
+/** self的弱引用 */
+#define ELHWeakSelf __weak typeof(self) weakSelf = self;
+
+#define ELHWriteToFile(dictArr, filename) [(dictArr) writeToFile:[NSString stringWithFormat:@"/Users/elahuo/Desktop/%@.plist", (filename)] atomically:YES];
+
+/** 常用类 */
+#import "ELHConst.h"
+#import "UIView+AdjustFrame.h"
+
+
+/** 颜色相关 */
+#define ELHColor(r, g, b, a) [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:(a)]
+// 全局颜色
+#define ELHGlobalColor ELHColor(29, 154, 115, 1)
+// 背景颜色
+#define ELHBackgroundColor ELHColor(224, 240, 238, 1)
+// 占位文字颜色
+#define ELHPlaceholderLabelColor ELHColor(95, 208, 168, 1)
+
+/** 屏幕相关 */
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#endif
+
+#endif /* ELaHuo_pch */

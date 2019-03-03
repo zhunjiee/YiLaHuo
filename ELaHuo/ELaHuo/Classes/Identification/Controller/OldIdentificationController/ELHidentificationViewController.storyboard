@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Thb-gG-DR7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Hidentification View Controller-->
+        <scene sceneID="zZP-6b-khR">
+            <objects>
+                <viewController id="Thb-gG-DR7" customClass="ELHidentificationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9MH-BL-keh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugG-YC-h4y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wRi-xm-M0t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-1n-pn7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QiL-pU-W0d">
+                                        <rect key="frame" x="50" y="5" width="500" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="sTP-ZU-QMV"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="身份证"/>
+                                            <segment title="营业执照"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.14171173040000001" green="0.57580128210000003" blue="0.50425160520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentedControlClick" destination="Thb-gG-DR7" eventType="valueChanged" id="OqI-7j-A9I"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QiL-pU-W0d" firstAttribute="centerX" secondItem="gUg-1n-pn7" secondAttribute="centerX" id="JBv-cF-uiN"/>
+                                    <constraint firstItem="QiL-pU-W0d" firstAttribute="centerY" secondItem="gUg-1n-pn7" secondAttribute="centerY" id="JMb-ak-sHq"/>
+                                    <constraint firstAttribute="trailing" secondItem="QiL-pU-W0d" secondAttribute="trailing" constant="50" id="Twi-PM-WXr"/>
+                                    <constraint firstAttribute="height" constant="40" id="Xoo-db-sm7"/>
+                                    <constraint firstItem="QiL-pU-W0d" firstAttribute="leading" secondItem="gUg-1n-pn7" secondAttribute="leading" constant="50" id="xlx-yA-3wG"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0n-f4-UVs">
+                                <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j0n-f4-UVs" firstAttribute="leading" secondItem="wRi-xm-M0t" secondAttribute="leading" id="5rt-Xn-wMC"/>
+                            <constraint firstAttribute="trailing" secondItem="j0n-f4-UVs" secondAttribute="trailing" id="8mk-9a-oL2"/>
+                            <constraint firstItem="gUg-1n-pn7" firstAttribute="top" secondItem="wRi-xm-M0t" secondAttribute="top" id="ap3-hH-7O8"/>
+                            <constraint firstItem="j0n-f4-UVs" firstAttribute="top" secondItem="gUg-1n-pn7" secondAttribute="bottom" id="gdT-9D-G3h"/>
+                            <constraint firstItem="ugG-YC-h4y" firstAttribute="top" secondItem="j0n-f4-UVs" secondAttribute="bottom" id="gzT-gb-1uW"/>
+                            <constraint firstAttribute="trailing" secondItem="gUg-1n-pn7" secondAttribute="trailing" id="pmT-Po-zER"/>
+                            <constraint firstItem="gUg-1n-pn7" firstAttribute="leading" secondItem="wRi-xm-M0t" secondAttribute="leading" id="s9J-hg-kx8"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="scrollView" destination="j0n-f4-UVs" id="ah6-yw-QfX"/>
+                        <outlet property="segmentedControl" destination="QiL-pU-W0d" id="tyH-Yx-llk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byu-Kj-332" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="388"/>
+        </scene>
+    </scenes>
+</document>

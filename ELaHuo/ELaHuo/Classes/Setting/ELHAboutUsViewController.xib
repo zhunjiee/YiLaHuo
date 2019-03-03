@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ELHAboutUsViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOl-dy-RSy">
+                    <rect key="frame" x="10" y="20" width="580" height="211"/>
+                    <string key="text">e拉货是一个货运叫车平台，
+
+通过移动互联网思维整合货运资源，
+
+为货主以及司机搭建供需透明化的平台，
+
+配套先进的物流电子锁为货物提供更安全保障，
+
+解决货主叫车难，司机空驶率高，货物安全的问题，
+
+从而降低货主运输成本，提高司机收入，e拉货，拉货好帮手！</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KOl-dy-RSy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D88-TO-ZJO"/>
+                <constraint firstItem="KOl-dy-RSy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="GZZ-Q7-Tjq"/>
+                <constraint firstAttribute="trailing" secondItem="KOl-dy-RSy" secondAttribute="trailing" constant="10" id="KeL-4N-LCB"/>
+                <constraint firstItem="KOl-dy-RSy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qRG-Pz-bUK"/>
+                <constraint firstItem="KOl-dy-RSy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="x61-rD-yEi"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="D88-TO-ZJO"/>
+                    <exclude reference="x61-rD-yEi"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

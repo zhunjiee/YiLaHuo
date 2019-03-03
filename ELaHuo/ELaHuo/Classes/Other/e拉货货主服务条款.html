@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 5px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h3 id="toc_0" style="text-align:center">e拉货货主服务条款</h3>
+
+<h4 id="toc_1">特别提示：</h4>
+
+<p>1．本《软件许可及服务协议》（以下简称《协议》）是软件服务使用人（以下简称“用户”或者“您”）与深圳易拉货网络有限公司（以下简称“本公司”或者“我们”或者“易拉货”）之间关于用户下载、安装、使用“e拉货”软件（包括但不限于PC版及移动电话、PDA版等各种无线手持终端版本的“e拉货”软件，以下简称“软件”）；注册、使用、管理e拉货帐号；以及使用本公司提供的相关服务所订立的协议。本《协议》描述易拉货与用户之间关于“软件”许可使用及服务相关方面的权利义务。“用户”或者“您”是指通过易拉货提供的获取软件授权和帐号注册的途径获得软件产品授权许可以及易拉货公司相关服务的个人或组织。</p>
+
+<p>2． “e拉货”软件由易拉货研发，并同意按照本《协议》的规定及其不时发布的操作规则提供基于互联网以及移动网的相关服务（以下称“网络服务”）。为获得网络服务，用户应认真阅读、充分理解本《协议》中各条款，特别涉及免除或者限制责任的条款，对用户的权利限制的条款，约定争议解决方式、司法管辖、法律适用的条款。请您审慎阅读并选择勾选接受或不接受本《协议》（无民事行为能力人、限制民事行为能力人或者未满18周岁的未成年人应在法定监护人陪同下阅读）。除非您接受本《协议》所有条款，否则您无权下载、安装或使用本软件及其相关服务。您的下载、安装、使用、帐号获取和登录等行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。</p>
+
+<p>3．易拉货有权对本《协议》进行修改，修改后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知。用户可重新下载安装本软件或登录网站查阅最新版协议条款。在易拉货修改《协议》条款后，如果用户不接受修改后的条款，请立即停止使用易拉货提供的软件和服务，如果用户继续使用易拉货提供的软件和服务，即视为您已接受了修改后的协议。</p>
+
+<p>4．除本《协议》有明确规定外，本《协议》并未对利用本“软件”使用的易拉货或合作单位的其他服务规定相关的服务条款。对于这些服务，一般有单独的服务条款加以规范，用户须在使用有关服务时另行了解与确认。单独的服务条款与本《协议》有冲突的地方，以单独的服务条款为准。如用户使用该服务，视为对相关单独服务条款的接受。</p>
+
+<p>5．用户注册成功后，本公司将给予每个用户一个用户帐号，该帐号归本公司所有，用户完成申请注册手续后，获得该帐号的使用权。帐号使用权仅属于初始申请注册人，初始申请注册人不得赠与、借用、租用、转让或售卖该账号或者以其他方式许可非初始申请注册人使用该账号。用户承担帐号、账号注册信息与密码的保管责任，并就其帐号及密码项下的一切行为承担法律责任。</p>
+
+<h4 id="toc_2">正文</h4>
+
+<p><strong>一、知识产权声明</strong></p>
+
+<p>1.1 易拉货是“e拉货”软件的知识产权权利人。“e拉货”软件的一切著作权、版权、商标权、专利权、商业秘密等知识产权，以及相关的所有信息内容，包括但不限于：文字表述及其组合、音频、视频、图标、图饰、图表、色彩、界面设计、版面框架、有关数据、印刷材料、或电子文档等均受中华人民共和国相关法律法规和相应的国际条约保护，除涉及第三方授权的软件或技术外，本公司享有上述知识产权。</p>
+
+<p>1.2 未经本公司书面同意，用户不得为任何营利性或非营利性的目的自行实施、利用、转让或许可任何三方实施、利用、转让上述知识产权，本公司保留追究上述行为法律责任的权利。</p>
+
+<p><strong>二、授权范围</strong></p>
+
+<p>2.1 用户可以为非商业目的在单一台终端设备上安装、使用、显示、运行“e拉货”软件。用户不得为商业运营目的安装、使用、运行“e拉货”软件，不得对本软件或者本软件运行过程中释放到任何计算机终端内存中的数据及本软件运行过程中客户端与服务器端的交互数据，以及本软件运行所必需的系统数据，进行复制、更改、修改、增加、删除、挂接运行或创作任何衍生作品，形式包括但不限于使用插件、外挂或非经本公司授权的第三方工具/服务接入本软件和相关系统。</p>
+
+<p>2.2 未经本公司书面许可，用户不得将“e拉货”软件安装在未经本公司明示许可的其他终端设备上，包括但不限于机顶盒、无线上网机、游戏机、电视机等。</p>
+
+<p>2.3 保留权利：未经明示授权的其他一切权利仍归本公司所有，用户使用其他权利时须另外取得本公司的书面同意。</p>
+
+<p><strong>三、服务内容</strong></p>
+
+<p>3.1 “e拉货”服务的具体内容由本公司根据实际情况提供，主要包括协助用户发送运力和运货信息、进行合作车辆管理，在线监控，在线交易等服务。</p>
+
+<p>3.2 用户理解并同意，本公司仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如个人电脑、手机、其他与接入互联网或移动网有关的装置）及第三方收取的相关费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行承担。</p>
+
+<p>3.3 “e拉货”平台不是货运服务平台，本公司是提供货运相关信息的平台。本公司是将货主发货需求和货车司机拉货需求进行对接的平台。因此，货车司机向您提供的货运服务将受到您与货车司机之间协议条款的约束（见附件一）；</p>
+
+<p>本公司仅提供相关的网络服务，除此之外，对于任何用户之间、用户与第三方之间产生的的任何问题（包括但不限于货损、货丢、费用、保险等问题），本公司不承担任何责任。</p>
+
+<p><strong>四、服务变更、中断或终止</strong></p>
+
+<p>4.1 鉴于网络服务的特殊性，用户同意本公司有权随时变更、中断或终止部分或全部的网络服务（包括收费网络服务及免费网络服务）。如变更、中断或终止的网络服务属于免费网络服务，本公司无需通知用户，也无需对任何用户或任何第三方承担任何责任；如变更、中断或终止的网络服务属于收费网络服务，本公司应当在变更、中断或终止之前事先通知用户，并可以向受影响的用户提供等值的替代性的收费网络服务，如用户不愿意接受替代性的收费网络服务，就该用户已经向本公司支付的服务费，本公司应当按照该用户实际使用相应收费网络服务的情况扣除相应服务费之后将剩余的服务费退还给该用户。</p>
+
+<p>4.2 用户理解并同意，本公司需要定期或不定期地对提供网络服务的平台（如互联网网站、移动网络等）或相关的设备进行检修或者维护，如因此类情况而造成收费网络服务在合理时间内的中断，本公司无需为此承担任何责任。但除特殊情况外，本公司会就上述情况事先进行通告。</p>
+
+<p>4.3 如发生下列任何一种情形，本公司有权随时中断或终止向用户提供本《协议》项下的网络服务【该网络服务包括但不限于收费及免费网络服务（其中包括基于广告模式的免费网络服务）】而无需对用户或任何第三方承担任何责任：</p>
+
+<p>•   （1）用户提供的个人资料不真实；</p>
+
+<p>•   （2）用户违反本《协议》中规定的使用规则；</p>
+
+<p>•   （3）相关法律法规规定的其他情形。</p>
+
+<p>4.4 用户注册的免费帐号昵称和姓名如存在违反法律法规或国家政策要求，或侵犯任何第三方合法权益的情况，本公司有权禁止用户继续使用该帐号、昵称、姓名。</p>
+
+<p><strong>五、使用规则</strong></p>
+
+<p>5.1用户在申请使用“e拉货”软件网络服务时，必须向本公司提供准确、真实的个人相关资料，且需要通过人工认证方能开始使用软件。如个人资料有任何变动，必须及时更新。更新后，本公司有权暂停该司机用户的使用权，同时需要人工再次认证方能继续使用软件。</p>
+
+<p>个人资料变动后，司机用户没有及时进行信息更新或者不配合本公司进行信息更新或人工认证，由此造成的损失（包括但不限于软件无法进行正常使用、与第三者发生的纠纷等），应由司机用户自行承担。</p>
+
+<p>5.2 用户不应将其帐号、密码转让或出借予他人使用。如用户发现其帐号遭他人非法使用，应立即通知本公司。因黑客行为、病毒等原因或因用户的保管疏忽导致帐号、密码遭他人非法使用，本公司不承担任何责任。</p>
+
+<p>5.3 用户同意，本公司有权在提供网络服务过程中通过“e拉货”给其手机推送短信、微信或邮件。用户在其他渠道发布的货物信息，同意且授权本公司在“e拉货”内部发布。</p>
+
+<p>5.4 用户同意，本公司有权在提供网络服务过程中以各种方式投放各种商业性广告或其他任何类型的商业信息，并且，用户同意接受本公司通过电子邮件或其他方式向用户发送商品促销或其他相关商业信息。</p>
+
+<p>5.5 用户在使用“e拉货”服务过程中，必须遵循以下原则：</p>
+
+<p>•   （1）遵守中国有关的法律和法规；</p>
+
+<p>•   （2）遵守所有与网络服务有关的网络协议、规定和程序；</p>
+
+<p>•   （3）不得为任何非法目的而使用网络服务系统；</p>
+
+<p>•   （4）不得以任何形式使用“e拉货”服务侵犯本公司的商业利益，包括并不限于发布非经本公司许可的商业广告；</p>
+
+<p>•   （5）不得利用“e拉货”网络服务系统进行任何可能对互联网或移动网正常运转造成不利影响的行为；</p>
+
+<p>•   （6）不得利用本产品提供的网络服务上传、展示或传播任何虚假的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；</p>
+
+<p>•   （7）不得侵犯其他任何第三方的专利权、著作权、商标权、名誉权或其他任何合法权益；</p>
+
+<p>•   （8）不得利用“e拉货”服务系统进行任何不利于本公司的行为（包括但不限于窃取、外泄服务系统内的信息等）；</p>
+
+<p>•   （9）相关法律法规规定的其他情形。</p>
+
+<p>5.6 本公司针对某些特定的“e拉货”网络服务的使用通过各种方式（包括但不限于网页公告、电子邮件、短信提醒等）作出的任何声明、通知、警示等内容视为本《协议》的一部分，用户如使用该网络服务，视为用户同意该等声明、通知、警示的内容并受其约束。</p>
+
+<p>5.7 本公司有权对用户使用“e拉货”网络服务【该网络服务包括但不限于收费及免费网络服务（其中包括基于广告模式的免费网络服务）】的情况进行审查和监督(包括但不限于对用户存储在本公司的内容进行审核)，如用户在使用网络服务时违反任何上述规定，本公司有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容等、暂停或终止用户使用网络服务的权利），以减轻用户不当行为造成的影响。因用户自身行为需向第三人承担责任的，由用户自行承担，与本公司无关。</p>
+
+<p><strong>六、收款</strong></p>
+
+<p>6.1 您可以免费下载和使用我们的应用程序和服务。我们保留日后就应用程序和/或服务收取使用费的权利。如果我们决定收取此类费用，我们将向您发送通知，并允许您选择继续履行或终止本合约。</p>
+
+<p>6.2 我们将根据与货车司机之间的协议，代表货车司机向您收取货运服务的费用。</p>
+
+<p>6.3 若您有开发票的需要，请联系我们客户电话4000528810，我们会按您要求开票并收取相应的税点。</p>
+
+<p>6.4 我们使用第三方电子支付服务供应商（以下简称“电子支付服务商”），将您的支付帐户关联到您在e拉货平台的个人帐户。处理您使用服务相关的付款时，除了受到本《用户条款》的约束之外，还要受电子支付服务商及信用卡/借记卡发卡行的条款和政策的约束。我们对于电子支付服务商或银行发生的错误不承担责任。我们将获取与您使用服务相关的特定交易明细。在使用这些信息时我们将严格遵守相关法律法规和公司的各项政策。</p>
+
+<p><strong>七、“e拉货”管理规定</strong></p>
+
+<p>7.1 用户注册“e拉货”账号，注册内容、各种信息，用户本人应当为信息的真实性负责。同时用户应当使用真实身份信息，不得以虚假、冒用的居民身份信息、企业注册信息、组织机构代码信息等进行注册。</p>
+
+<p>7.2 本公司会设置相应的奖惩制度，用户在使用“e拉货”时，应保证信息真实，诚信为本，禁止爽约、虚假单子、恶意抢单等行为，一经发现，本公司有权停止用户账号及处罚，并视情节严重性，追究其法律责任。</p>
+
+<p>7.3 您与司机达成交易付款后，在发货前二小时内不得取消此次服务，若取消订单，我们将会对您收取此次订单费用的20%违约金作为对使司机误工的赔偿费。如果您一个月内违约三次（违约：违约：货主付款后约定发货时间前一小时内取消订单行为），本平台将禁止您发布运货信息三个月。</p>
+
+<p>7.4 您与司机达成交易付款后，在发货前二小时前不得取消此次服务，若取消订单，我们将会对您收取此次订单费用的10%违约金作为对使司机误工的赔偿费。如果您一个月内违约三次（违约：违约：货主付款后约定发货时间前一小时内取消订单行为），本平台将禁止您发布运货信息三个月。</p>
+
+<p>7.5 您提交的认证申请，我们将在两个工作日的时间内对您进行审核并回复。</p>
+
+<p>7.6 “e拉货”将建立健全用户信息安全管理制度、落实技术安全防控措施。本公司将会采取合理的措施，对用户使用“e拉货”网络服务过程中涉及的用户隐私内容加以保护。</p>
+
+<p><strong>八、隐私保护</strong></p>
+
+<p>8.1 保护用户隐私是本公司的一项基本政策，本公司保证不对外公开或向第三方提供单个用户的注册资料及用户在使用网络服务时存储在“e拉货”的非公开内容，但下列情况除外：</p>
+
+<p>•   （1）事先获得用户的明确授权；</p>
+
+<p>•   （2）根据有关的法律法规要求；</p>
+
+<p>•   （3）按照相关政府主管部门的要求；</p>
+
+<p>•   （4）为维护社会公众的利益；</p>
+
+<p>•   （5）为维护本公司的合法权益。</p>
+
+<p>8.2 “e拉货”可能会与第三方合作向用户提供相关的网络服务，在此情况下，如该第三方同意承担与本公司同等的保护用户隐私的责任，则本公司有权将用户的注册资料等提供给该第三方。</p>
+
+<p>8.3在不透露单个用户隐私资料的前提下，本公司有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。</p>
+
+<p><strong>九、免责声明</strong></p>
+
+<p>9.1 用户理解并同意，其使用本公司网络服务所存在的风险将完全由其自己承担；因其使用本公司网络服务而产生的一切后果也由其自己承担，本公司对用户不承担任何责任。</p>
+
+<p>9.2 本公司对网络服务不作任何类型的担保，不论是明示的、默示的或法令的保证和条件，包括但不限于网络服务的及时性、安全性、准确性，对在任何情况下因使用或不能使用本网络服务所产生的直接、间接、偶然、特殊及后续的损害及风险，本公司不承担任何责任。</p>
+
+<p>9.3 对于不可抗力、计算机病毒、黑客攻击、系统不稳定、用户所在位置、用户关机以及其他任何网络、技术、通信线路等原因造成的服务中断或不能满足用户要求的风险，由用户自行承担，本公司不承担任何责任。</p>
+
+<p>9.4 用户理解并同意，对于本公司向用户提供的下列产品或者服务的质量缺陷本身及其引发的任何损失，本公司无需承担任何责任：</p>
+
+<p>•   （1）本公司向用户免费提供的各项网络服务；</p>
+
+<p>•   （2）本公司向用户赠送的任何产品或者服务；</p>
+
+<p>9.5 用户（特别是司机用户）理解并同意，“e拉货”所提供的功能受制于我国的交通法律法规和管理条例，即当本产品的功能和条例发生冲突时，应以各地的交通法律法规和管理条例为最高准则。任何通过“e拉货”服务直接或间接违反当地交通法律法规和管理条例的行为，该后果应由用户承担。如有举证需要，本公司可以向有关部门提供相关数据作为证据。</p>
+
+<p>9.6 用户（特别是司机用户）理解安全驾驶的重要性，且保证在任何可能引起安全隐患的情况下均不得使用“e拉货”，并同意一切因使用“e拉货”服务而导致的安全隐患和因此产生的纠纷和交通事故，本公司概不负责赔偿。如有举证需要，本公司可以向有关部门提供相关数据作为证据。</p>
+
+<p><strong>十、违约责任</strong></p>
+
+<p>10.1 如因本公司违反有关法律、法规或本《协议》项下的任何条款而给用户造成损失，本公司同意承担由此造成的损害赔偿责任。</p>
+
+<p>10.2 用户同意保障和维护本公司及其他用户的利益，如因用户违反有关法律、法规或本《协议》项下的任何条款而给本公司或任何其他第三人造成损失，用户同意独立承担相应的法律责任。</p>
+
+<p><strong>十一、协议修改</strong></p>
+
+<p>11.1 本公司有权随时修改本《协议》的任何条款，一旦本《协议》的内容发生变动，本公司将会直接在本公司网站上公布修改之后的协议内容，该公布行为视为本公司已经通知用户修改内容。同时本公司也可通过其他适当方式向用户提示修改内容。</p>
+
+<p>11.2 如果不同意本公司对本《协议》相关条款所做的修改，用户应当停止使用网络服务。如果用户继续使用网络服务，则视为用户接受本公司对本《协议》相关条款所做的修改并同意受其约束。</p>
+
+<p><strong>十二、通知送达</strong></p>
+
+<p>12.1 本《协议》项下本公司对于用户所有的通知均可通过网页公告、电子邮件、手机短信或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。</p>
+
+<p>12.2 用户对于本公司的通知应当通过本公司对外正式公布的通信地址、传真号码、电子邮件地址等联系信息进行送达。该等通知以本公司实际收到日为送达日。</p>
+
+<p><strong>十三、法律管辖</strong></p>
+
+<p>13.1 本《协议》的订立、成立、生效、履行、解释及争议的解决均应适用中华人民共和国大陆地区的法律并受中国有管辖权的法院管辖。</p>
+
+<p>13.2 与本《协议》有关的或由本《协议》引起的任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向本公司所在地的人民法院提起诉讼。</p>
+
+<p><strong>十四、其他规定</strong></p>
+
+<p>14.1 本《协议》构成双方对本《协议》之约定事项及其他有关事宜的完整协议，除本《协议》和《附件一》规定的之外，未赋予本《协议》各方其他权利。</p>
+
+<p>14.2 如本《协议》中的任何条款无论因何种原因完全或部分无效或不具有执行力，本《协议》的其余条款仍应有效并且有约束力。</p>
+
+<p>14.3 本《协议》的所有标题仅仅是为了醒目及阅读方便，本身并无实际涵义，不能作为本《协议》涵义解释之依据。</p>
+
+<hr>
+
+<p><em>附件一</em></p>
+
+<h3 id="toc_3" style="text-align:center">货运服务协议</h3>
+
+<p>以下甲方指货车司机，乙方指货主方。</p>
+
+<p><strong>一、甲方的权利与义务</strong></p>
+
+<p>1-1 甲方同意接受乙方通过e拉货信息平台发出的发货订单，并按照乙方选定的车辆、接送时间及地点、行驶线路以及在e拉货信息平台公示的货运价格等要求向乙方提供货运服务。</p>
+
+<p>1-2 甲方委托e拉货信息平台向乙方收取货运服务费并按照乙方在e拉货信息平台预留的相关信息向乙方送达相应金额。</p>
+
+<p>1-3 甲方依法享有货车的所有权，可在车辆上加设甲方标志，有权在提供替代车的前提下召回需要进行正常保养、维修、年检及办理相关许可手续等的租赁汽车。</p>
+
+<p>1-4 甲方应保证所提供的车辆均符合有关物流货运法律法规中的各项规定。</p>
+
+<p><strong>二、乙方的权利与义务</strong></p>
+
+<p>2-1 乙方应依约及时通过甲方委托收款的e拉货信息平台支付货运服务费。</p>
+
+<p>2-2 乙方应向甲方提供真实、准确的个人信息和企业信息。</p>
+
+<p>2-3 乙方依法于甲方同意的运输期间内享有租赁汽车的使用权，不得将车辆进行转卖、抵押、质押、典当、转租或实施任何超越乙方在全部租车文件项下法律权利的行为。如有违反，乙方承担由此带来的一切法律后果并赔偿甲方损失，包括甲方可能获得的租赁收入损失。</p>
+
+<p>2-4 乙方应按照车辆行驶证载明性能、机动车操作规程及相关法律、法规的规定正确使用租赁货车；不得将车辆用于教练车或进行体育、竞赛、抗震抗压等测试以及其他具有破坏性的驾驶或实验；不得装载易燃易爆物品或腐蚀性及具有浓重异味物品；不得利用车辆进行违法或其他任何有损甲方、第三人合法权益的活动。</p>
+
+<p>2-5 乙方变更、取消订单的，要按照相应的计费规则支付相应费用。</p>
+
+<p>2-6 乙方污损、损坏车辆的相予以赔偿。</p>
+
+<p><strong>三、生效及其他</strong></p>
+
+<p>3-1 本协议自甲方接受乙方通过e拉货信息平台发出的发货订单时生效。</p>
+
+<p>3-2 双方关于本协议的争议，应友好协商解决。协商不成的，任何一方可向有管辖权的人民法院提起诉讼。</p>
+
+<p>3-3 乙方同意甲方可将全部服务条款文件项下的权利义务（包括诉讼管辖之约定）在第三方承诺全部接受甲方的权利义务的前提下全部或部分转让给第三方。</p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>

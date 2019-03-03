@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CameraLock" customModule="eLahuoForCar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZR-KQ-jNJ">
+                    <rect key="frame" x="540" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="TZi-SQ-Nv7"/>
+                        <constraint firstAttribute="height" constant="60" id="nlU-jB-LyO"/>
+                    </constraints>
+                    <state key="normal" image="closeButton"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dottedLine" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-oY-gL6">
+                    <rect key="frame" x="40" y="65" width="520" height="355"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="Bz7-ro-8Qx"/>
+                        <constraint firstAttribute="width" constant="300" id="e40-fQ-ZlG"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Bz7-ro-8Qx"/>
+                            <exclude reference="e40-fQ-ZlG"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nca-PY-lDa">
+                    <rect key="frame" x="42" y="67" width="516" height="351"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="298" id="Eld-yi-VH4"/>
+                        <constraint firstAttribute="height" constant="398" id="bDW-4R-zjX"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Eld-yi-VH4"/>
+                            <exclude reference="bDW-4R-zjX"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-XI-DU1">
+                    <rect key="frame" x="30" y="470" width="540" height="30"/>
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.68627450980000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XXA-LN-cKM"/>
+                    </constraints>
+                    <state key="normal" title="确认施封">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1992884457447901" green="0.1992884457447901" blue="0.1992884457447901" alpha="0.69827681737588654" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EZR-KQ-jNJ" secondAttribute="trailing" id="1Q9-dx-cXH"/>
+                <constraint firstItem="Nca-PY-lDa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="42" id="7fL-rw-6gK"/>
+                <constraint firstItem="Qj5-XI-DU1" firstAttribute="top" secondItem="Zas-oY-gL6" secondAttribute="bottom" constant="50" id="9d7-8g-91D"/>
+                <constraint firstItem="Qj5-XI-DU1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="9gA-5P-aT5"/>
+                <constraint firstItem="Zas-oY-gL6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="AVw-hP-DYm"/>
+                <constraint firstAttribute="trailing" secondItem="Qj5-XI-DU1" secondAttribute="trailing" constant="30" id="AZH-hN-UzK"/>
+                <constraint firstItem="Qj5-XI-DU1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KP8-60-7UN"/>
+                <constraint firstItem="Qj5-XI-DU1" firstAttribute="top" secondItem="Nca-PY-lDa" secondAttribute="bottom" constant="52" id="Ui5-hk-tcy"/>
+                <constraint firstItem="Zas-oY-gL6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="65" id="Wgy-hJ-ELn"/>
+                <constraint firstItem="EZR-KQ-jNJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aoi-Lj-6IQ"/>
+                <constraint firstItem="Nca-PY-lDa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="67" id="dQa-AH-fDR"/>
+                <constraint firstAttribute="bottom" secondItem="Qj5-XI-DU1" secondAttribute="bottom" constant="100" id="gGc-sF-6an"/>
+                <constraint firstAttribute="trailing" secondItem="Zas-oY-gL6" secondAttribute="trailing" constant="40" id="rfH-fR-2sf"/>
+                <constraint firstAttribute="trailing" secondItem="Nca-PY-lDa" secondAttribute="trailing" constant="42" id="z0P-10-zSP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cameraLockImageView" destination="Nca-PY-lDa" id="Fud-Xz-B6m"/>
+                <outlet property="closeButton" destination="EZR-KQ-jNJ" id="RV6-0H-0gW"/>
+                <outlet property="commitButton" destination="Qj5-XI-DU1" id="a2o-3A-OUm"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="30" height="30"/>
+        <image name="dottedLine" width="300" height="400"/>
+    </resources>
+</document>

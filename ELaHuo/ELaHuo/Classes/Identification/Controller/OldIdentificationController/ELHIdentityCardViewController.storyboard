@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E13-jn-96G">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Identity Card View Controller-->
+        <scene sceneID="BSf-pe-KYr">
+            <objects>
+                <tableViewController id="E13-jn-96G" customClass="ELHIdentityCardViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="UQL-85-WuZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.95294117649999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="个人信息" id="rpR-9d-7a5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7C0-8M-gjF">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7C0-8M-gjF" id="eHh-Jb-Ksj">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="真实姓名 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-za-6zL">
+                                                    <rect key="frame" x="10" y="9" width="78" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5ie-JA-lrr"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Jt0-Px-1vO"/>
+                                                        <constraint firstAttribute="width" constant="97" id="ZdC-Qj-QEZ"/>
+                                                        <constraint firstAttribute="width" constant="80" id="b9l-4S-Jtc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="5ie-JA-lrr"/>
+                                                            <exclude reference="ZdC-Qj-QEZ"/>
+                                                            <exclude reference="b9l-4S-Jtc"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入真实姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pG0-py-ddu" customClass="ELHPlaceholderTextField">
+                                                    <rect key="frame" x="98" y="9" width="482" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="0E0-OF-b0Y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="0E0-OF-b0Y"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e1Q-za-6zL" firstAttribute="centerY" secondItem="eHh-Jb-Ksj" secondAttribute="centerY" id="JKT-je-nJa"/>
+                                                <constraint firstItem="e1Q-za-6zL" firstAttribute="leading" secondItem="eHh-Jb-Ksj" secondAttribute="leading" constant="10" id="Rcw-4q-sYx"/>
+                                                <constraint firstItem="pG0-py-ddu" firstAttribute="leading" secondItem="e1Q-za-6zL" secondAttribute="trailing" constant="10" id="Tvf-Bu-A9f"/>
+                                                <constraint firstItem="pG0-py-ddu" firstAttribute="centerY" secondItem="e1Q-za-6zL" secondAttribute="centerY" id="V2F-v1-QxD"/>
+                                                <constraint firstAttribute="trailing" secondItem="pG0-py-ddu" secondAttribute="trailing" constant="20" id="hqp-5r-izS"/>
+                                                <constraint firstItem="pG0-py-ddu" firstAttribute="width" secondItem="e1Q-za-6zL" secondAttribute="width" id="lqj-dQ-ZuV"/>
+                                                <constraint firstItem="pG0-py-ddu" firstAttribute="height" secondItem="e1Q-za-6zL" secondAttribute="height" id="rUi-Ll-k9z"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="lqj-dQ-ZuV"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="图片信息" id="ubf-rC-hwv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="nrh-0a-7lO">
+                                        <rect key="frame" x="0.0" y="145" width="600" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nrh-0a-7lO" id="07f-9R-Mdr">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证照片 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-pL-gz1">
+                                                    <rect key="frame" x="10" y="62" width="95" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="4if-gj-Mnv"/>
+                                                        <constraint firstAttribute="width" constant="98" id="erU-el-nK3"/>
+                                                        <constraint firstAttribute="width" constant="95" id="haf-dX-Avl"/>
+                                                        <constraint firstAttribute="height" constant="25" id="oR6-Qf-IXh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="4if-gj-Mnv"/>
+                                                            <exclude reference="erU-el-nK3"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="IDcard_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-wt-LAK">
+                                                    <rect key="frame" x="125" y="10" width="455" height="129"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="136" id="s40-CF-gma"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="s40-CF-gma"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na4-P5-WX4">
+                                                    <rect key="frame" x="125" y="10" width="455" height="129"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR7-WF-V2s">
+                                                    <rect key="frame" x="297" y="62" width="110" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="CTp-2A-0ap"/>
+                                                        <constraint firstAttribute="height" constant="30" id="wgH-XB-eLl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="点击拍照">
+                                                        <color key="titleColor" red="0.1220884738" green="0.8293520942" blue="0.66596208530000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="CTp-2A-0ap"/>
+                                                            <exclude reference="wgH-XB-eLl"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="takePhotoButtonClick" destination="E13-jn-96G" eventType="touchUpInside" id="QrH-vY-ZN3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Qze-wt-LAK" secondAttribute="bottom" constant="10" id="Egv-04-fYs"/>
+                                                <constraint firstItem="Na4-P5-WX4" firstAttribute="bottom" secondItem="Qze-wt-LAK" secondAttribute="bottom" id="Fo4-RR-lU5"/>
+                                                <constraint firstItem="Na4-P5-WX4" firstAttribute="leading" secondItem="Qze-wt-LAK" secondAttribute="leading" id="H1B-dc-TKc"/>
+                                                <constraint firstItem="Na4-P5-WX4" firstAttribute="top" secondItem="07f-9R-Mdr" secondAttribute="top" constant="10" id="HkP-zb-Ift"/>
+                                                <constraint firstItem="Qze-wt-LAK" firstAttribute="leading" secondItem="UmM-pL-gz1" secondAttribute="trailing" constant="20" id="Ias-k7-agV"/>
+                                                <constraint firstAttribute="bottom" secondItem="Na4-P5-WX4" secondAttribute="bottom" constant="10" id="JRv-Cn-HVM"/>
+                                                <constraint firstItem="UmM-pL-gz1" firstAttribute="centerY" secondItem="07f-9R-Mdr" secondAttribute="centerY" id="QMG-My-47z"/>
+                                                <constraint firstItem="Na4-P5-WX4" firstAttribute="top" secondItem="Qze-wt-LAK" secondAttribute="top" id="TPp-1w-oKn"/>
+                                                <constraint firstItem="Na4-P5-WX4" firstAttribute="trailing" secondItem="Qze-wt-LAK" secondAttribute="trailing" id="cq0-WB-IW4"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qze-wt-LAK" secondAttribute="trailing" constant="20" id="qIA-Lm-drg"/>
+                                                <constraint firstItem="UmM-pL-gz1" firstAttribute="leading" secondItem="07f-9R-Mdr" secondAttribute="leading" constant="10" id="rX4-Q5-BEG"/>
+                                                <constraint firstItem="Qze-wt-LAK" firstAttribute="top" secondItem="07f-9R-Mdr" secondAttribute="top" constant="10" id="x7L-vj-mCf"/>
+                                                <constraint firstItem="Qze-wt-LAK" firstAttribute="centerY" secondItem="UmM-pL-gz1" secondAttribute="centerY" id="z64-cg-yb7"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="HkP-zb-Ift"/>
+                                                    <exclude reference="JRv-Cn-HVM"/>
+                                                    <exclude reference="z64-cg-yb7"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="E13-jn-96G" id="GLj-Iv-x3R"/>
+                            <outlet property="delegate" destination="E13-jn-96G" id="HKw-Lx-0Cn"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="idCardImageView" destination="Na4-P5-WX4" id="bwT-wF-ZX2"/>
+                        <outlet property="idCardPlaceholderImageView" destination="Qze-wt-LAK" id="HkV-aD-WmZ"/>
+                        <outlet property="nameTextField" destination="pG0-py-ddu" id="Bvq-K4-Oyu"/>
+                        <outlet property="takePhotoButton" destination="pR7-WF-V2s" id="3DX-YL-Q43"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ww-gD-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IDcard_placeholder" width="620" height="465"/>
+    </resources>
+</document>

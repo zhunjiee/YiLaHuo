@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Eq8-oH-bhX" userLabel="Check Picture View" customClass="CheckPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-PD-lJN">
+                    <rect key="frame" x="540" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="LBQ-OZ-ICm"/>
+                        <constraint firstAttribute="height" constant="60" id="vmG-RG-XgH"/>
+                    </constraints>
+                    <state key="normal" image="closeButton"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dottedLine" translatesAutoresizingMaskIntoConstraints="NO" id="exz-mb-598">
+                    <rect key="frame" x="40" y="65" width="520" height="485"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="Tkb-Ph-pts"/>
+                        <constraint firstAttribute="width" constant="300" id="fUL-m6-ANM"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Tkb-Ph-pts"/>
+                            <exclude reference="fUL-m6-ANM"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRv-zr-nUB">
+                    <rect key="frame" x="41" y="66" width="518" height="483"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="398" id="atD-LG-BQa"/>
+                        <constraint firstAttribute="width" constant="298" id="pDx-7S-Xdk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="atD-LG-BQa"/>
+                            <exclude reference="pDx-7S-Xdk"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.10402502946963343" green="0.10402502946963343" blue="0.10402502946963343" alpha="0.80277593087517729" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="exz-mb-598" secondAttribute="bottom" constant="50" id="1EM-lI-Yxa"/>
+                <constraint firstItem="exz-mb-598" firstAttribute="top" secondItem="Eq8-oH-bhX" secondAttribute="top" constant="65" id="1am-xd-Y3U"/>
+                <constraint firstAttribute="trailing" secondItem="rRv-zr-nUB" secondAttribute="trailing" constant="41" id="8v0-QG-eMc"/>
+                <constraint firstItem="oxL-PD-lJN" firstAttribute="top" secondItem="Eq8-oH-bhX" secondAttribute="top" id="9Uc-eD-29p"/>
+                <constraint firstAttribute="bottom" secondItem="rRv-zr-nUB" secondAttribute="bottom" constant="51" id="KoS-dn-psf"/>
+                <constraint firstItem="rRv-zr-nUB" firstAttribute="top" secondItem="Eq8-oH-bhX" secondAttribute="top" constant="66" id="hiH-cL-xNz"/>
+                <constraint firstItem="rRv-zr-nUB" firstAttribute="leading" secondItem="Eq8-oH-bhX" secondAttribute="leading" constant="41" id="pgE-ZX-2kz"/>
+                <constraint firstAttribute="trailing" secondItem="exz-mb-598" secondAttribute="trailing" constant="40" id="qRk-26-EGn"/>
+                <constraint firstItem="exz-mb-598" firstAttribute="leading" secondItem="Eq8-oH-bhX" secondAttribute="leading" constant="40" id="tDi-fN-yHJ"/>
+                <constraint firstAttribute="trailing" secondItem="oxL-PD-lJN" secondAttribute="trailing" id="zSr-0d-OyS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="oxL-PD-lJN" id="9Oh-6L-YAq"/>
+                <outlet property="imageView" destination="rRv-zr-nUB" id="8Dq-AU-3YY"/>
+            </connections>
+            <point key="canvasLocation" x="466" y="-293"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="30" height="30"/>
+        <image name="dottedLine" width="300" height="400"/>
+    </resources>
+</document>

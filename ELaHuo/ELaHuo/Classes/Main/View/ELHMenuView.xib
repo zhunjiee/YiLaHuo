@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6vV-IL-1cg" customClass="ELHMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="438"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-IZ-6cF">
+                    <rect key="frame" x="0.0" y="0.0" width="253" height="438"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DE6-kg-uj5">
+                            <rect key="frame" x="0.0" y="189" width="253" height="249"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAb-1m-ySN" customClass="ELHMenuButton">
+                                    <rect key="frame" x="26" y="0.0" width="200" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="ZDB-vp-flL"/>
+                                        <constraint firstAttribute="height" constant="30" id="jNu-bl-1Yd"/>
+                                    </constraints>
+                                    <state key="normal" title="历史订单" image="icon_order">
+                                        <color key="titleColor" red="0.11372549019607843" green="0.60392156862745094" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.078431372550000003" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9l-FJ-VF0" customClass="ELHMenuButton">
+                                    <rect key="frame" x="26" y="43" width="200" height="30"/>
+                                    <state key="normal" title="实名认证" image="icon_certificate">
+                                        <color key="titleColor" red="0.1137254902" green="0.60392156860000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.078431372550000003" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-On-84o" customClass="ELHMenuButton">
+                                    <rect key="frame" x="26" y="86" width="200" height="30"/>
+                                    <state key="normal" title="我的钱包" image="icon_wallet">
+                                        <color key="titleColor" red="0.1137254902" green="0.60392156860000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.078431372550000003" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sww-cJ-Ux1" customClass="ELHMenuButton">
+                                    <rect key="frame" x="26" y="129" width="200" height="30"/>
+                                    <state key="normal" title="系统设置" image="icon_setting">
+                                        <color key="titleColor" red="0.1137254902" green="0.60392156860000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.078431372549019607" green="0.27058823529411763" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mx-nM-HRM">
+                                    <rect key="frame" x="0.0" y="30" width="253" height="1"/>
+                                    <color key="backgroundColor" red="0.86823734729493895" green="0.86823734729493895" blue="0.86823734729493895" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="edc-Kq-T4Y"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-8s-EwC">
+                                    <rect key="frame" x="0.0" y="73" width="253" height="1"/>
+                                    <color key="backgroundColor" red="0.86823734730000002" green="0.86823734730000002" blue="0.86823734730000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="6EY-gK-0so"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBx-Zp-DZh">
+                                    <rect key="frame" x="0.0" y="116" width="253" height="1"/>
+                                    <color key="backgroundColor" red="0.86823734730000002" green="0.86823734730000002" blue="0.86823734730000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="GRv-Mp-5IL"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ky-jU-1At">
+                                    <rect key="frame" x="0.0" y="159" width="253" height="1"/>
+                                    <color key="backgroundColor" red="0.86823734730000002" green="0.86823734730000002" blue="0.86823734730000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="t7J-tB-Bqg"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ibD-On-84o" firstAttribute="height" secondItem="nAb-1m-ySN" secondAttribute="height" id="0LK-KH-LhJ"/>
+                                <constraint firstItem="ibD-On-84o" firstAttribute="top" secondItem="a9l-FJ-VF0" secondAttribute="bottom" constant="10" id="0Ve-w7-gq4"/>
+                                <constraint firstItem="nBx-Zp-DZh" firstAttribute="trailing" secondItem="5mx-nM-HRM" secondAttribute="trailing" id="0dz-Hs-B8x"/>
+                                <constraint firstItem="8M3-8s-EwC" firstAttribute="leading" secondItem="5mx-nM-HRM" secondAttribute="leading" id="57D-UG-6ce"/>
+                                <constraint firstItem="nBx-Zp-DZh" firstAttribute="leading" secondItem="5mx-nM-HRM" secondAttribute="leading" id="8tF-Uw-Rgi"/>
+                                <constraint firstItem="a9l-FJ-VF0" firstAttribute="width" secondItem="nAb-1m-ySN" secondAttribute="width" id="At4-h6-hIr"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="height" secondItem="nAb-1m-ySN" secondAttribute="height" id="D4Z-i4-sqw"/>
+                                <constraint firstAttribute="trailing" secondItem="5mx-nM-HRM" secondAttribute="trailing" id="Eib-S0-JQJ"/>
+                                <constraint firstItem="5mx-nM-HRM" firstAttribute="top" secondItem="nAb-1m-ySN" secondAttribute="bottom" id="Elg-Jw-CoY"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="top" secondItem="nBx-Zp-DZh" secondAttribute="bottom" constant="12" id="FfZ-WA-6YD"/>
+                                <constraint firstItem="nBx-Zp-DZh" firstAttribute="top" secondItem="ibD-On-84o" secondAttribute="bottom" id="KeC-mV-S6O"/>
+                                <constraint firstItem="7Ky-jU-1At" firstAttribute="height" secondItem="5mx-nM-HRM" secondAttribute="height" id="PO2-Ys-OOB"/>
+                                <constraint firstItem="ibD-On-84o" firstAttribute="centerX" secondItem="nAb-1m-ySN" secondAttribute="centerX" id="SBH-IJ-e2Z"/>
+                                <constraint firstItem="a9l-FJ-VF0" firstAttribute="centerX" secondItem="nAb-1m-ySN" secondAttribute="centerX" id="SSa-2l-yaO"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="width" secondItem="nAb-1m-ySN" secondAttribute="width" id="SfN-e6-Cz0"/>
+                                <constraint firstItem="a9l-FJ-VF0" firstAttribute="top" secondItem="5mx-nM-HRM" secondAttribute="bottom" constant="12" id="TQq-o0-BGw"/>
+                                <constraint firstItem="nAb-1m-ySN" firstAttribute="top" secondItem="DE6-kg-uj5" secondAttribute="top" id="Yhm-xQ-fF9"/>
+                                <constraint firstItem="ibD-On-84o" firstAttribute="top" secondItem="8M3-8s-EwC" secondAttribute="bottom" constant="12" id="ZWb-Lf-fcT"/>
+                                <constraint firstItem="8M3-8s-EwC" firstAttribute="top" secondItem="a9l-FJ-VF0" secondAttribute="bottom" id="bHC-ig-SLC"/>
+                                <constraint firstItem="nAb-1m-ySN" firstAttribute="centerX" secondItem="DE6-kg-uj5" secondAttribute="centerX" id="faf-LN-JRS"/>
+                                <constraint firstItem="7Ky-jU-1At" firstAttribute="leading" secondItem="5mx-nM-HRM" secondAttribute="leading" id="fkT-4u-IcL"/>
+                                <constraint firstItem="a9l-FJ-VF0" firstAttribute="height" secondItem="nAb-1m-ySN" secondAttribute="height" id="h4r-Qb-3RM"/>
+                                <constraint firstItem="ibD-On-84o" firstAttribute="width" secondItem="nAb-1m-ySN" secondAttribute="width" id="iAR-bj-5w3"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="centerX" secondItem="nAb-1m-ySN" secondAttribute="centerX" id="id7-NB-rky"/>
+                                <constraint firstItem="nBx-Zp-DZh" firstAttribute="height" secondItem="5mx-nM-HRM" secondAttribute="height" id="j9c-h9-fzq"/>
+                                <constraint firstItem="5mx-nM-HRM" firstAttribute="leading" secondItem="DE6-kg-uj5" secondAttribute="leading" id="lBe-Up-ERC"/>
+                                <constraint firstItem="8M3-8s-EwC" firstAttribute="height" secondItem="5mx-nM-HRM" secondAttribute="height" id="lgU-oy-1uK"/>
+                                <constraint firstItem="5mx-nM-HRM" firstAttribute="trailing" secondItem="nAb-1m-ySN" secondAttribute="trailing" id="qc1-kx-Umm"/>
+                                <constraint firstItem="7Ky-jU-1At" firstAttribute="top" secondItem="Sww-cJ-Ux1" secondAttribute="bottom" id="tdq-5b-tkf"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="top" secondItem="ibD-On-84o" secondAttribute="bottom" constant="10" id="w83-We-zX0"/>
+                                <constraint firstItem="7Ky-jU-1At" firstAttribute="trailing" secondItem="5mx-nM-HRM" secondAttribute="trailing" id="wY4-3M-Q3H"/>
+                                <constraint firstItem="a9l-FJ-VF0" firstAttribute="top" secondItem="nAb-1m-ySN" secondAttribute="bottom" constant="10" id="wkd-g9-r8F"/>
+                                <constraint firstItem="Sww-cJ-Ux1" firstAttribute="top" secondItem="a9l-FJ-VF0" secondAttribute="bottom" constant="10" id="wkq-Vv-nup"/>
+                                <constraint firstItem="5mx-nM-HRM" firstAttribute="leading" secondItem="nAb-1m-ySN" secondAttribute="leading" id="yAe-08-9B1"/>
+                                <constraint firstItem="8M3-8s-EwC" firstAttribute="trailing" secondItem="5mx-nM-HRM" secondAttribute="trailing" id="zdp-UU-w1e"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="qc1-kx-Umm"/>
+                                    <exclude reference="yAe-08-9B1"/>
+                                    <exclude reference="wkd-g9-r8F"/>
+                                    <exclude reference="0Ve-w7-gq4"/>
+                                    <exclude reference="w83-We-zX0"/>
+                                    <exclude reference="wkq-Vv-nup"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-dk-bJZ" customClass="ELHButton">
+                            <rect key="frame" x="67" y="35" width="120" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="PhN-UF-Rch"/>
+                                <constraint firstAttribute="height" constant="90" id="eTr-28-C33"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="登录/注册" image="icon_head_1">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfi-UV-bjh">
+                            <rect key="frame" x="47" y="133" width="160" height="12"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KV-7t-eTM">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="实名认证" image="icon_certificate_gray">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="icon_certificate">
+                                        <color key="titleColor" red="0.14171173040000001" green="0.57580128210000003" blue="0.50425160520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.14171173040000001" green="0.57580128210000003" blue="0.50425160520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HF-QL-zME">
+                                    <rect key="frame" x="85" y="0.0" width="75" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="企业认证" image="icon_certificate_gray">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="icon_certificate">
+                                        <color key="titleColor" red="0.14171173040000001" green="0.57580128210000003" blue="0.50425160520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.14171173040000001" green="0.57580128210000003" blue="0.50425160520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="3HF-QL-zME" firstAttribute="leading" secondItem="8KV-7t-eTM" secondAttribute="trailing" constant="10" id="32k-qS-VfV"/>
+                                <constraint firstItem="8KV-7t-eTM" firstAttribute="leading" secondItem="vfi-UV-bjh" secondAttribute="leading" id="GeQ-eD-PSK"/>
+                                <constraint firstAttribute="bottom" secondItem="8KV-7t-eTM" secondAttribute="bottom" id="Vf0-V4-ak2"/>
+                                <constraint firstAttribute="bottom" secondItem="3HF-QL-zME" secondAttribute="bottom" id="Zv6-51-Ecr"/>
+                                <constraint firstAttribute="width" constant="160" id="aCx-El-Xcc"/>
+                                <constraint firstItem="3HF-QL-zME" firstAttribute="width" secondItem="8KV-7t-eTM" secondAttribute="width" id="cGt-63-gnY"/>
+                                <constraint firstAttribute="trailing" secondItem="3HF-QL-zME" secondAttribute="trailing" id="iWB-ZN-YGS"/>
+                                <constraint firstItem="3HF-QL-zME" firstAttribute="top" secondItem="vfi-UV-bjh" secondAttribute="top" id="lTl-R0-NQV"/>
+                                <constraint firstAttribute="height" constant="12" id="niu-FT-uIW"/>
+                                <constraint firstItem="3HF-QL-zME" firstAttribute="height" secondItem="8KV-7t-eTM" secondAttribute="height" id="rCd-Is-qGT"/>
+                                <constraint firstItem="8KV-7t-eTM" firstAttribute="top" secondItem="vfi-UV-bjh" secondAttribute="top" id="smT-DB-IBk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.95294117649999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DE6-kg-uj5" secondAttribute="trailing" id="Bul-J4-OFt"/>
+                        <constraint firstItem="u8a-dk-bJZ" firstAttribute="centerX" secondItem="kAa-IZ-6cF" secondAttribute="centerX" id="Ec9-P4-EMX"/>
+                        <constraint firstItem="DE6-kg-uj5" firstAttribute="leading" secondItem="kAa-IZ-6cF" secondAttribute="leading" id="imn-u8-BQt"/>
+                        <constraint firstItem="u8a-dk-bJZ" firstAttribute="top" secondItem="kAa-IZ-6cF" secondAttribute="top" constant="35" id="lVr-0a-BHw"/>
+                        <constraint firstItem="vfi-UV-bjh" firstAttribute="centerX" secondItem="kAa-IZ-6cF" secondAttribute="centerX" id="nyN-Pg-Jiv"/>
+                        <constraint firstItem="DE6-kg-uj5" firstAttribute="top" secondItem="vfi-UV-bjh" secondAttribute="bottom" constant="44" id="rl2-zA-doj"/>
+                        <constraint firstAttribute="bottom" secondItem="DE6-kg-uj5" secondAttribute="bottom" id="shZ-vo-eGe"/>
+                        <constraint firstItem="vfi-UV-bjh" firstAttribute="top" secondItem="u8a-dk-bJZ" secondAttribute="bottom" constant="8" id="vjF-2t-Bx2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kAa-IZ-6cF" secondAttribute="trailing" id="1bz-gO-Xwp"/>
+                <constraint firstItem="kAa-IZ-6cF" firstAttribute="leading" secondItem="6vV-IL-1cg" secondAttribute="leading" id="9Y1-QF-HZB"/>
+                <constraint firstAttribute="bottom" secondItem="kAa-IZ-6cF" secondAttribute="bottom" id="EAZ-x8-WLf"/>
+                <constraint firstItem="kAa-IZ-6cF" firstAttribute="top" secondItem="6vV-IL-1cg" secondAttribute="top" id="qN1-b5-93N"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="companyIdentity" destination="3HF-QL-zME" id="yp7-rj-KDL"/>
+                <outlet property="historyOrderButton" destination="nAb-1m-ySN" id="pTx-xa-1cG"/>
+                <outlet property="identificationButton" destination="a9l-FJ-VF0" id="tnW-qv-fHd"/>
+                <outlet property="loginButton" destination="u8a-dk-bJZ" id="UcL-6b-Lhi"/>
+                <outlet property="myWalletButton" destination="ibD-On-84o" id="ZaH-Vp-KxC"/>
+                <outlet property="orderHistoryButtonWith" destination="ZDB-vp-flL" id="eYL-tj-FfI"/>
+                <outlet property="settingButton" destination="Sww-cJ-Ux1" id="xEV-fc-4Fg"/>
+                <outlet property="topViewConstraint" destination="lVr-0a-BHw" id="2Eh-lB-Iuk"/>
+                <outlet property="trueNameIdentity" destination="8KV-7t-eTM" id="Ywi-vl-fvo"/>
+            </connections>
+            <point key="canvasLocation" x="225.5" y="332"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_certificate" width="16" height="13"/>
+        <image name="icon_certificate_gray" width="16" height="12"/>
+        <image name="icon_head_1" width="64" height="64"/>
+        <image name="icon_order" width="16" height="18"/>
+        <image name="icon_setting" width="16" height="16"/>
+        <image name="icon_wallet" width="16" height="17"/>
+    </resources>
+</document>
